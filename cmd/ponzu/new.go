@@ -141,6 +141,15 @@ func createProjectInDir(path string,prjname string) error {
 	if err!=nil {
 		return fmt.Errorf("Failed to write go.mod %s.\n", err)
 	}
+	content,err1=os.ReadFile(filepath.Join(path,"cmd","ponzu","main_dev"))
+	if err1!=nil {
+		return fmt.Errorf("Failed to read main_dev.mod %s.\n", err1)
+	}
+	ncontent:=strings.ReplaceAll(string(content),"##MODNAME##",prjname)
+	err=os.WriteFile(filepath.Join(path,"cmd","ponzu","main.go"),[]byte(ncontent),0666)
+	if err!=nil {
+		return fmt.Errorf("Failed to write go.mod %s.\n", err)
+	}
 	fmt.Println("New ponzu project created at", path)
 	return nil
 }
