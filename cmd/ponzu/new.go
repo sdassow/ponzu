@@ -36,36 +36,13 @@ over the network.`,
 
 // name2path transforns a project name to an absolute path
 func name2path(projectName string) (string, error) {
-	gopath, err := getGOPATH()
-	if err != nil {
-		return "", err
-	}
-	gosrc := filepath.Join(gopath, "src")
-
+	
 	path := projectName
-	// support current directory
-	if path == "." {
-		path, err = os.Getwd()
-		if err != nil {
-			return "", err
-		}
-	} else {
-		path = filepath.Join(gosrc, path)
-	}
+	
+	path = filepath.Join(".", path)
+	
 
-	// make sure path is inside $GOPATH/src
-	srcrel, err := filepath.Rel(gosrc, path)
-	if err != nil {
-		return "", err
-	}
-	if len(srcrel) >= 2 && srcrel[:2] == ".." {
-		return "", fmt.Errorf("path '%s' must be inside '%s'", projectName, gosrc)
-	}
-	if srcrel == "." {
-		return "", fmt.Errorf("path '%s' must not be %s", path, filepath.Join("GOPATH", "src"))
-	}
-
-	_, err = os.Stat(path)
+	_, err := os.Stat(path)
 	if err != nil && !os.IsNotExist(err) {
 		return "", err
 	}
@@ -79,6 +56,7 @@ func name2path(projectName string) (string, error) {
 }
 
 func newProjectInDir(path string) error {
+	prjname:=path
 	path, err := name2path(path)
 	if err != nil && !os.IsNotExist(err) {
 		return err
@@ -113,52 +91,21 @@ func newProjectInDir(path string) error {
 		return nil
 	}
 
-	return createProjectInDir(path)
+	return createProjectInDir(path,prjname)
 }
 
-func createProjectInDir(path string) error {
-	gopath, err := getGOPATH()
-	if err != nil {
-		return err
-	}
+func createProjectInDir(path string,prjname string) error {
+	
 	repo := ponzuRepo
-	local := filepath.Join(gopath, "src", filepath.Join(repo...))
 	network := "https://" + strings.Join(repo, "/") + ".git"
-	if !strings.HasPrefix(path, gopath) {
-		path = filepath.Join(gopath, path)
-	}
+	
 
 	// create the directory or overwrite it
-	err = os.MkdirAll(path, os.ModeDir|os.ModePerm)
+	err := os.MkdirAll(path, os.ModeDir|os.ModePerm)
 	if err != nil {
 		return err
 	}
-
-	if dev {
-		if fork != "" {
-			local = filepath.Join(gopath, "src", fork)
-		}
-
-		err = execAndWait("git", "clone", local, "--branch", "ponzu-dev", "--single-branch", path)
-		if err != nil {
-			return err
-		}
-
-		err = vendorCorePackages(path)
-		if err != nil {
-			return err
-		}
-
-		fmt.Println("Dev build cloned from " + local + ":ponzu-dev")
-		return nil
-	}
-
-	// try to git clone the repository from the local machine's $GOPATH
-	err = execAndWait("git", "clone", local, path)
-	if err != nil {
-		fmt.Println("Couldn't clone from", local, "- trying network...")
-
-		// try to git clone the repository over the network
+	
 		networkClone := exec.Command("git", "clone", network, path)
 		networkClone.Stdout = os.Stdout
 		networkClone.Stderr = os.Stderr
@@ -172,19 +119,13 @@ func createProjectInDir(path string) error {
 		if err != nil {
 			fmt.Println("Network clone failure.")
 			// failed
-			return fmt.Errorf("Failed to clone files from local machine [%s] and over the network [%s].\n%s", local, network, err)
+			return fmt.Errorf("Failed to clone files over the network [%s].\n%s", network, err)
 		}
 	}
 
-	// create an internal vendor directory in ./cmd/ponzu and move content,
-	// management and system packages into it
-	err = vendorCorePackages(path)
-	if err != nil {
-		return err
-	}
 
 	// remove non-project files and directories
-	rmPaths := []string{".git", ".circleci"}
+	rmPaths := []string{".git", ".circleci","system"}
 	for _, rm := range rmPaths {
 		dir := filepath.Join(path, rm)
 		err = os.RemoveAll(dir)
@@ -192,14 +133,23 @@ func createProjectInDir(path string) error {
 			fmt.Println("Failed to remove directory from your project path. Consider removing it manually:", dir)
 		}
 	}
-
+	str1:=fmt.Sprintf("'%s'","module "+prjname)
+    modcreate_cmd:=exec.Command("echo",str1,">go.mod")
+	modcreate_cmd.Path=path
+	err=modcreate_cmd.Run()
+	if err!=nil {
+		return fmt.Errorf("failed command: [%s].\n", err)
+	}
+	modcreate_cmd=exec.Command("cat","go_dev.mod",">>go.mod")
+	modcreate_cmd.Path=path
+	err=modcreate_cmd.Run()
+	if err!=nil {
+		return fmt.Errorf("failed command: [%s].\n", err)
+	}
 	fmt.Println("New ponzu project created at", path)
 	return nil
 }
 
 func init() {
-	newCmd.Flags().StringVar(&fork, "fork", "", "modify repo source for Ponzu core development")
-	newCmd.Flags().BoolVar(&dev, "dev", false, "modify environment for Ponzu core development")
-
 	RegisterCmdlineCommand(newCmd)
 }
