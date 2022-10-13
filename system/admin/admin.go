@@ -9,10 +9,10 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/ponzu-cms/ponzu/system/admin/user"
-	"github.com/ponzu-cms/ponzu/system/api/analytics"
-	"github.com/ponzu-cms/ponzu/system/db"
-	"github.com/ponzu-cms/ponzu/system/item"
+	"github.com/tomma-a/ponzu/system/admin/user"
+	"github.com/tomma-a/ponzu/system/api/analytics"
+	"github.com/tomma-a/ponzu/system/db"
+	"github.com/tomma-a/ponzu/system/item"
 )
 
 var startAdminHTML = `<!doctype html>
@@ -82,7 +82,7 @@ var endAdminHTML = `
         </div>
         <footer class="row">
             <div class="col s12">
-                <p class="center-align">Powered by &copy; <a target="_blank" href="https://ponzu-cms.org">Ponzu</a> &nbsp;&vert;&nbsp; open-sourced by <a target="_blank" href="https://www.bosssauce.it">Boss Sauce Creative</a></p>
+                <p class="center-align">Powered by &copy; <a target="_blank" href="https://tomma-a.org">Ponzu</a> &nbsp;&vert;&nbsp; open-sourced by <a target="_blank" href="https://www.bosssauce.it">Boss Sauce Creative</a></p>
             </div>     
         </footer>
     </body>

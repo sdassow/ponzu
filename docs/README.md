@@ -15,7 +15,7 @@ Here is how to run a local docs server and build them for release:
 
 1. Clone this repository
 ```bash
-$ git clone https://github.com/ponzu-cms/docs.git
+$ git clone https://github.com/tomma-a/docs.git
 ``` 
 2. Start the development server which will watch and auto-build the docs
 ```bash

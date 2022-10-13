@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/ponzu-cms/ponzu/system/cfg"
+	"github.com/tomma-a/ponzu/system/cfg"
 
-	"github.com/ponzu-cms/ponzu/system/item"
+	"github.com/tomma-a/ponzu/system/item"
 
 	"github.com/blevesearch/bleve"
 	"github.com/blevesearch/bleve/mapping"

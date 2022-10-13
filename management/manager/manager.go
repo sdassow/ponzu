@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"html/template"
 
-	"github.com/ponzu-cms/ponzu/management/editor"
-	"github.com/ponzu-cms/ponzu/system/item"
+	"github.com/tomma-a/ponzu/management/editor"
+	"github.com/tomma-a/ponzu/system/item"
 
 	"github.com/gofrs/uuid"
 )

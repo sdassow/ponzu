@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	_ "github.com/ponzu-cms/ponzu/content"
-	"github.com/ponzu-cms/ponzu/system/admin"
-	"github.com/ponzu-cms/ponzu/system/api"
-	"github.com/ponzu-cms/ponzu/system/api/analytics"
-	"github.com/ponzu-cms/ponzu/system/db"
-	"github.com/ponzu-cms/ponzu/system/tls"
+	_ "github.com/tomma-a/ponzu/content"
+	"github.com/tomma-a/ponzu/system/admin"
+	"github.com/tomma-a/ponzu/system/api"
+	"github.com/tomma-a/ponzu/system/api/analytics"
+	"github.com/tomma-a/ponzu/system/db"
+	"github.com/tomma-a/ponzu/system/tls"
 
 	"github.com/spf13/cobra"
 )
