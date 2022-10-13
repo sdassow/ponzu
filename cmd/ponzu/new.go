@@ -6,7 +6,6 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
-
 	"github.com/spf13/cobra"
 )
 
@@ -82,7 +81,7 @@ func newProjectInDir(path string) error {
 				return fmt.Errorf("Failed to overwrite %s. \n%s", path, err)
 			}
 
-			return createProjectInDir(path)
+			return createProjectInDir(path,prjname)
 
 		default:
 			fmt.Println("Input not recognized. No files overwritten. Answer as 'y' or 'n' only.")
@@ -121,7 +120,6 @@ func createProjectInDir(path string,prjname string) error {
 			// failed
 			return fmt.Errorf("Failed to clone files over the network [%s].\n%s", network, err)
 		}
-	}
 
 
 	// remove non-project files and directories
@@ -133,18 +131,15 @@ func createProjectInDir(path string,prjname string) error {
 			fmt.Println("Failed to remove directory from your project path. Consider removing it manually:", dir)
 		}
 	}
-	str1:=fmt.Sprintf("'%s'","module "+prjname)
-    modcreate_cmd:=exec.Command("echo",str1,">go.mod")
-	modcreate_cmd.Path=path
-	err=modcreate_cmd.Run()
-	if err!=nil {
-		return fmt.Errorf("failed command: [%s].\n", err)
+
+	content,err1:=os.ReadFile(filepath.Join(path,"go_dev.mod"))
+	if err1!=nil {
+		return fmt.Errorf("Failed to read go_dev.mod %s.\n", err1)
 	}
-	modcreate_cmd=exec.Command("cat","go_dev.mod",">>go.mod")
-	modcreate_cmd.Path=path
-	err=modcreate_cmd.Run()
+	ncontent:=strings.ReplaceAll(string(content),"##MODNAME##",prjname)
+	err=os.WriteFile(filepath.Join(path,"go.mod"),[]byte(ncontent),0666)
 	if err!=nil {
-		return fmt.Errorf("failed command: [%s].\n", err)
+		return fmt.Errorf("Failed to write go.mod %s.\n", err)
 	}
 	fmt.Println("New ponzu project created at", path)
 	return nil
