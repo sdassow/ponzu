@@ -5,15 +5,15 @@ go 1.19
 require (
 	github.com/blevesearch/bleve v1.0.14
 	github.com/boltdb/bolt v1.3.1
-	github.com/gofrs/uuid v4.3.0+incompatible
+	github.com/gofrs/uuid v4.4.0+incompatible
 	github.com/gorilla/schema v1.2.0
 	github.com/nilslice/email v0.1.0
 	github.com/nilslice/jwt v1.0.0
-	github.com/spf13/cobra v1.6.0
-	github.com/tidwall/gjson v1.14.3
+	github.com/spf13/cobra v1.7.0
+	github.com/tidwall/gjson v1.17.0
 	github.com/tidwall/sjson v1.2.5
-	golang.org/x/crypto v0.0.0-20221012134737-56aed061732a
-	golang.org/x/text v0.3.8
+	golang.org/x/crypto v0.14.0
+	golang.org/x/text v0.13.0
 )
 
 require (
@@ -31,7 +31,7 @@ require (
 	github.com/glycerine/go-unsnap-stream v0.0.0-20181221182339-f9677308dec2 // indirect
 	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
-	github.com/inconshreveable/mousetrap v1.0.1 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/mschoch/smat v0.2.0 // indirect
 	github.com/philhofer/fwd v1.0.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
@@ -41,6 +41,6 @@ require (
 	github.com/tinylib/msgp v1.1.0 // indirect
 	github.com/willf/bitset v1.1.10 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
-	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
-	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f // indirect
+	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/sys v0.13.0 // indirect
 )
