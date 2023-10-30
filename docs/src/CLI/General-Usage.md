@@ -237,7 +237,7 @@ $ ponzu --dev new /path/to/new/project # will create $GOPATH/src/path/to/new/pro
 $ cd /path/to/new/project
 $ ponzu build && ponzu run
 
-# push to your origin:ponzu-dev branch and create a PR at tomma-a/ponzu
+# push to your origin:ponzu-dev branch and create a PR at sdassow/ponzu
 $ git push origin ponzu-dev
 # ... go to https://github.com/sdassow/ponzu and create a PR
 ```

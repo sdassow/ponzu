@@ -18,12 +18,12 @@ if [ $CIRCLE_BRANCH = "ponzu-dev" ]; then
         git pull origin ponzu-dev
 
         # create new project using the ponzu-dev branch
-        ponzu new --dev github.com/tomma-a/ci/test-project
+        ponzu new --dev github.com/sdassow/ci/test-project
 else 
-        ponzu new github.com/tomma-a/ci/test-project
+        ponzu new github.com/sdassow/ci/test-project
 fi
 
-cd /go/src/github.com/tomma-a/ci/test-project
+cd /go/src/github.com/sdassow/ci/test-project
 
 ponzu gen content person name:string hashed_secret:string
 ponzu gen content message from:@person,hashed_secret to:@person,hashed_secret

@@ -129,7 +129,7 @@
       </div>
     
     <div class="md-source__repository">
-      tomma-a/ponzu
+      sdassow/ponzu
     </div>
   </a>
 
@@ -176,7 +176,7 @@
       </div>
     
     <div class="md-source__repository">
-      tomma-a/ponzu
+      sdassow/ponzu
     </div>
   </a>
 
@@ -819,7 +819,7 @@
                 <p>Both the databases <code>system.db</code> &amp; <code>analytics.db</code>, and the <code>/uploads</code> directory can be backed up over HTTP using <code>wget</code>, <code>curl</code>, etc. All of which are located at the <code>/admin/backup</code> route and require HTTP Basic Auth. In order to enable backups, you must add a user/password pair inside the CMS Configuration at <code>/admin/configure</code> near the bottom of the page.</p>
 <p>All backups are made using a <code>GET</code> request to the <code>/admin/backup</code> path with a query parameter of <code>?source={system,analytics,uploads}</code> (only one source can be included in the URL).</p>
 <p>Here are some full backup scripts to use or modify to fit your needs:
-<a href="https://github.com/tomma-a/backup-scripts">https://github.com/tomma-a/backup-scripts</a></p>
+<a href="https://github.com/sdassow/backup-scripts">https://github.com/sdassow/backup-scripts</a></p>
 <h2 id="system-analytics">System &amp; Analytics<a class="headerlink" href="#system-analytics" title="Permanent link">&para;</a></h2>
 <p>The <code>system.db</code> &amp; <code>analytics.db</code> data files are sent uncompressed in their original form as they exist on your server. No temporary copy is stored on the origin server, and it is possible that the backup could fail so checking for successful backups is recommended. See https://github.com/boltdb/bolt#database-backups for more information about how BoltDB handles HTTP backups.</p>
 <p>An example backup request for the <code>system.db</code> data file would look like:</p>
@@ -909,7 +909,7 @@ $ tar xzf search.tar.gz
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-      <a href="https://github.com/tomma-a" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/sdassow" class="md-footer-social__link fa fa-github"></a>
     
       <a href="https://twitter.com/ponzu_cms" class="md-footer-social__link fa fa-twitter"></a>
     

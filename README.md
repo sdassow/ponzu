@@ -1,9 +1,9 @@
 ![My friend, "Gotoro"](ponzu-banner.png)
 
 # Ponzu
-[![Current Release](https://img.shields.io/github/release/tomma-a/ponzu.svg)](https://github.com/sdassow/ponzu/releases/latest)
+[![Current Release](https://img.shields.io/github/release/sdassow/ponzu.svg)](https://github.com/sdassow/ponzu/releases/latest)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/sdassow/ponzu)
-[![CircleCI Build Status](https://circleci.com/gh/tomma-a/ponzu.svg?style=shield)](https://circleci.com/gh/tomma-a/ponzu/tree/master)
+[![CircleCI Build Status](https://circleci.com/gh/sdassow/ponzu.svg?style=shield)](https://circleci.com/gh/sdassow/ponzu/tree/master)
 
 > Watch the [**video introduction**](https://www.youtube.com/watch?v=T_1ncPoLgrg)
 
@@ -46,7 +46,7 @@ $ ponzu gen content song title:"string" artist:"string" rating:"int" opinion:"st
 [↩](#a1)
 
 ## Documentation
-For more detailed documentation, check out the [docs](https://docs.tomma-a.org)
+For more detailed documentation, check out the [docs](...)
 
 ## Installation
 
@@ -277,7 +277,7 @@ $ ponzu new --dev /path/to/new/project # will create $GOPATH/src/path/to/new/pro
 $ cd /path/to/new/project
 $ ponzu build && ponzu run
 
-# push to your origin:ponzu-dev branch and create a PR at tomma-a/ponzu
+# push to your origin:ponzu-dev branch and create a PR at sdassow/ponzu
 $ git push origin ponzu-dev
 # ... go to https://github.com/sdassow/ponzu and create a PR
 ```

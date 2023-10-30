@@ -2,7 +2,7 @@ theme: material
 site_name: Ponzu
 docs_dir: src
 site_dir: build
-repo_name: tomma-a/ponzu
+repo_name: sdassow/ponzu
 repo_url: https://github.com/sdassow/ponzu
 
 markdown_extensions:
@@ -21,7 +21,5 @@ extra:
     accent: light-blue
   social:
     - type: github
-      link: https://github.com/tomma-a
-    - type: twitter
-      link: https://twitter.com/ponzu_cms
+      link: https://github.com/sdassow
   logo: images/logo.png

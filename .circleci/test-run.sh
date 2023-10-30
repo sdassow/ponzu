@@ -4,7 +4,7 @@
 
 set -ex
 
-cd /go/src/github.com/tomma-a/ci/test-project
+cd /go/src/github.com/sdassow/ci/test-project
 
 ponzu run --dev-https &        
 
@@ -17,7 +17,7 @@ touch cookies
 
 # Create initial admin user
 curl -v --cookie-jar cookies \
-    -d "name=Test&domain=localhost&email=test@tomma-a.org&password=ponzu" \
+    -d "name=Test&domain=localhost&email=test@example.com&password=ponzu" \
     -X POST localhost:8080/admin/init
 
 #Test that content types were generated

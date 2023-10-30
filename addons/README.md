@@ -1,7 +1,7 @@
 # Addons
 
 Place packages inside this directory to extend upon Ponzu core. Find more addons
-from the official repository at https://github.com/tomma-a/addons
+from the official repository at https://github.com/sdassow/addons
 
 All packages inside this directory get vendored upon executing `$ ponzu build`
 

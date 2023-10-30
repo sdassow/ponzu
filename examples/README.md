@@ -5,7 +5,7 @@ show how to use Ponzu and its features. The goal of this directory is not to hos
 full Ponzu projects, but rather just a few files or a package to demonstrate interface 
 implementation, using hooks, adding new API endpoints, or creating/using addons.
 
-For full-project examples, please see the [`tomma-a/examples`](https://github.com/tomma-a/examples) repo.
+For full-project examples, please see the [`sdassow/examples`](https://github.com/sdassow/examples) repo.
 
 If you are making a contribution to the Ponzu project and are introducing a new
 feature, it would be very helpful to include an example with a concrete use-case 
