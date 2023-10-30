@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/tomma-a/ponzu/system/db"
+	"github.com/sdassow/ponzu/system/db"
 )
 
 // sendPreflight is used to respond to a cross-origin "OPTIONS" request

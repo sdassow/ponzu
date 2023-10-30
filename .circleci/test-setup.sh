@@ -5,7 +5,7 @@
 set -ex 
 
 # Install Ponzu CMS
-go get -u github.com/tomma-a/ponzu/...
+go get -u github.com/sdassow/ponzu/...
 
 # test install
 ponzu
@@ -13,7 +13,7 @@ ponzu
 # create a project and generate code
 if [ $CIRCLE_BRANCH = "ponzu-dev" ]; then
         # ensure we have the latest from ponzu-dev branch
-        cd /go/src/github.com/tomma-a/ponzu
+        cd /go/src/github.com/sdassow/ponzu
         git checkout ponzu-dev
         git pull origin ponzu-dev
 

@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/tomma-a/ponzu/system/cfg"
+	"github.com/sdassow/ponzu/system/cfg"
 
-	"github.com/tomma-a/ponzu/system/backup"
+	"github.com/sdassow/ponzu/system/backup"
 )
 
 // Backup creates an archive of a project's search index and writes it

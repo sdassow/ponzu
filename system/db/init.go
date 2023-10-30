@@ -7,10 +7,10 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/tomma-a/ponzu/system/cfg"
+	"github.com/sdassow/ponzu/system/cfg"
 
-	"github.com/tomma-a/ponzu/system/item"
-	"github.com/tomma-a/ponzu/system/search"
+	"github.com/sdassow/ponzu/system/item"
+	"github.com/sdassow/ponzu/system/search"
 
 	"github.com/boltdb/bolt"
 	"github.com/nilslice/jwt"

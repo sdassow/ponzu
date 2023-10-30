@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tomma-a/ponzu/system/item"
-	"github.com/tomma-a/ponzu/system/search"
+	"github.com/sdassow/ponzu/system/item"
+	"github.com/sdassow/ponzu/system/search"
 
 	"github.com/boltdb/bolt"
 	"github.com/gofrs/uuid"

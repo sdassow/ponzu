@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/tomma-a/ponzu/system/db"
+	"github.com/sdassow/ponzu/system/db"
 )
 
 // QueryOptions is a mirror of the same struct in db package and are re-declared

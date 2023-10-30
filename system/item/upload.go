@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tomma-a/ponzu/management/editor"
+	"github.com/sdassow/ponzu/management/editor"
 )
 
 // FileUpload represents the file uploaded to the system

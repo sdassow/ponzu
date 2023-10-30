@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/boltdb/bolt"
-	"github.com/tomma-a/ponzu/system/cfg"
+	"github.com/sdassow/ponzu/system/cfg"
 )
 
 type apiRequest struct {

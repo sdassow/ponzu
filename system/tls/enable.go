@@ -12,8 +12,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/tomma-a/ponzu/system/db"
-	"github.com/tomma-a/ponzu/system/cfg"
+	"github.com/sdassow/ponzu/system/db"
+	"github.com/sdassow/ponzu/system/cfg"
 	"golang.org/x/crypto/acme/autocert"
 )
 

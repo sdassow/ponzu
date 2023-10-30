@@ -4,8 +4,8 @@
 package config
 
 import (
-	"github.com/tomma-a/ponzu/management/editor"
-	"github.com/tomma-a/ponzu/system/item"
+	"github.com/sdassow/ponzu/management/editor"
+	"github.com/sdassow/ponzu/system/item"
 )
 
 // Config represents the confirgurable options of the system

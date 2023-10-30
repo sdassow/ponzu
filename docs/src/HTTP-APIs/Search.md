@@ -26,9 +26,9 @@ which handles the indexing and querying.
 - Search results are formatted exactly the same as standard Content API calls, so you don't need to change your client data model  
 
 - Search handler will respect other interface implementations on your content, including: 
-    - [`item.Hideable`](https://godoc.org/github.com/tomma-a/ponzu/system/item#Hideable)
-    - [`item.Omittable`](https://godoc.org/github.com/tomma-a/ponzu/system/item#Omittable) 
-    - [`item.Pushable`](https://godoc.org/github.com/tomma-a/ponzu/system/item#Pushable) _(Note: only the first search result will be pushed)_
+    - [`item.Hideable`](https://godoc.org/github.com/sdassow/ponzu/system/item#Hideable)
+    - [`item.Omittable`](https://godoc.org/github.com/sdassow/ponzu/system/item#Omittable) 
+    - [`item.Pushable`](https://godoc.org/github.com/sdassow/ponzu/system/item#Pushable) _(Note: only the first search result will be pushed)_
 
 ##### Sample Response
 ```javascript

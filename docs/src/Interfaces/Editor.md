@@ -8,7 +8,7 @@ within the CMS.
 
 ## Interfaces
 
-### [editor.Editable](https://godoc.org/github.com/tomma-a/ponzu/management/editor#Editable)
+### [editor.Editable](https://godoc.org/github.com/sdassow/ponzu/management/editor#Editable)
 
 Editable determines what `[]bytes` are rendered inside the editor page. Use 
 Edtiable on anything inside your CMS that you want to provide configuration, editable 
@@ -51,7 +51,7 @@ func (p *Post) MarshalEditor() ([]byte, error) {
 
 ---
 
-### [editor.Mergeable](https://godoc.org/github.com/tomma-a/ponzu/management/editor#Mergeable)
+### [editor.Mergeable](https://godoc.org/github.com/sdassow/ponzu/management/editor#Mergeable)
 
 Mergable enables a CMS end-user to merge the "Pending" content from an outside source into the "Public" section, and thus making it visible via the public content API. It also allows the end-user to reject content. "Approve" and "Reject" buttons will be visible on the edit page for content submitted.
 

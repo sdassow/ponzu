@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/tomma-a/ponzu/system/db"
-	"github.com/tomma-a/ponzu/system/item"
+	"github.com/sdassow/ponzu/system/db"
+	"github.com/sdassow/ponzu/system/item"
 )
 
 func deleteUploadFromDisk(target string) error {

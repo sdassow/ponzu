@@ -14,11 +14,11 @@
 _A typical contribution workflow might look like:_
 ```bash
 # clone the repository and checkout ponzu-dev
-$ git clone https://github.com/tomma-a/ponzu path/to/local/ponzu # (or your fork)
+$ git clone https://github.com/sdassow/ponzu path/to/local/ponzu # (or your fork)
 $ git checkout ponzu-dev
 
 # install ponzu with go get or from your own local path
-$ go get github.com/tomma-a/ponzu/...
+$ go get github.com/sdassow/ponzu/...
 # or
 $ cd /path/to/local/ponzu 
 $ go install ./...
@@ -36,7 +36,7 @@ $ ponzu build && ponzu run
 
 # push to your origin:ponzu-dev branch and create a PR at tomma-a/ponzu
 $ git push origin ponzu-dev
-# ... go to https://github.com/tomma-a/ponzu and create a PR
+# ... go to https://github.com/sdassow/ponzu and create a PR
 ```
 
 **Note:** if you intend to work on your own fork and contribute from it, you will

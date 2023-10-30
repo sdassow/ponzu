@@ -1,8 +1,8 @@
 ![My friend, "Gotoro"](ponzu-banner.png)
 
 # Ponzu
-[![Current Release](https://img.shields.io/github/release/tomma-a/ponzu.svg)](https://github.com/tomma-a/ponzu/releases/latest)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/tomma-a/ponzu)
+[![Current Release](https://img.shields.io/github/release/tomma-a/ponzu.svg)](https://github.com/sdassow/ponzu/releases/latest)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/sdassow/ponzu)
 [![CircleCI Build Status](https://circleci.com/gh/tomma-a/ponzu.svg?style=shield)](https://circleci.com/gh/tomma-a/ponzu/tree/master)
 
 > Watch the [**video introduction**](https://www.youtube.com/watch?v=T_1ncPoLgrg)
@@ -51,7 +51,7 @@ For more detailed documentation, check out the [docs](https://docs.tomma-a.org)
 ## Installation
 
 ```
-$ go get -u github.com/tomma-a/ponzu/...
+$ go get -u github.com/sdassow/ponzu/...
 ```
 
 ## Requirements
@@ -74,7 +74,7 @@ Creates a project directory of the name supplied as a parameter immediately
 following the 'new' option in the $GOPATH/src directory. Note: 'new' depends on 
 the program 'git' and possibly a network connection. If there is no local 
 repository to clone from at the local machine's $GOPATH, 'new' will attempt to 
-clone the 'github.com/tomma-a/ponzu' package from over the network.
+clone the 'github.com/sdassow/ponzu' package from over the network.
 
 Example:
 ```bash
@@ -201,7 +201,7 @@ to run the Admin and API on separate processes, you must call them with the
 Will backup your own custom project code (like content, add-ons, uploads, etc) so
 we can safely re-clone Ponzu from the latest version you have or from the network 
 if necessary. Before running `$ ponzu upgrade`, you should update the `ponzu`
-package by running `$ go get -u github.com/tomma-a/ponzu/...` 
+package by running `$ go get -u github.com/sdassow/ponzu/...` 
 
 Example:
 ```bash
@@ -257,11 +257,11 @@ $ ponzu version --cli
 _A typical contribution workflow might look like:_
 ```bash
 # clone the repository and checkout ponzu-dev
-$ git clone https://github.com/tomma-a/ponzu path/to/local/ponzu # (or your fork)
+$ git clone https://github.com/sdassow/ponzu path/to/local/ponzu # (or your fork)
 $ git checkout ponzu-dev
 
 # install ponzu with go get or from your own local path
-$ go get github.com/tomma-a/ponzu/...
+$ go get github.com/sdassow/ponzu/...
 # or
 $ cd /path/to/local/ponzu 
 $ go install ./...
@@ -279,7 +279,7 @@ $ ponzu build && ponzu run
 
 # push to your origin:ponzu-dev branch and create a PR at tomma-a/ponzu
 $ git push origin ponzu-dev
-# ... go to https://github.com/tomma-a/ponzu and create a PR
+# ... go to https://github.com/sdassow/ponzu and create a PR
 ```
 
 **Note:** if you intend to work on your own fork and contribute from it, you will

@@ -3,7 +3,7 @@
 
 2) Install Ponzu CLI:
 ```bash
-$ go get github.com/tomma-a/ponzu/…
+$ go get github.com/sdassow/ponzu/…
 ```
 
 3) Create a new project (path is created in your GOPATH):

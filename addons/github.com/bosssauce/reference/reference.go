@@ -12,8 +12,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/tomma-a/ponzu/management/editor"
-	"github.com/tomma-a/ponzu/system/addon"
+	"github.com/sdassow/ponzu/management/editor"
+	"github.com/sdassow/ponzu/system/addon"
 )
 
 // Select returns the []byte of a <select> HTML element plus internal <options> with a label.
